@@ -2,6 +2,10 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 body {
@@ -14,51 +18,102 @@ body {
     width: 325px;
     margin: 0 auto;
     background-color: white;
+    padding-bottom: 30px;
     margin-top: 100px;
+    border-radius: 15px;
 }
 
 .hero-image {
     width: 100%;
-}
-
-.plan-box {
-    background-color: hsl(225, 100%, 98%);
-    width: 75%;
-    margin: 0 auto;
+    border-radius: 15px 15px 0 0;
 }
 
 .order-summary {
     text-align: center;
     color: hsl(223, 47%, 23%);
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 .description {
     text-align: center;
     color: hsl(224, 23%, 55%);
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.plan-box {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "music-icon annual-plan change"
+        "music-icon price change";
+    row-gap: 5px;
+    background-color: hsl(225, 100%, 98%);
+    width: 80%;
+    height: 75px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.music-icon {
+    width: 35px;
+    grid-area: music-icon;
+    justify-self: center;
+    align-self: center;
 }
 
 .annual-plan {
     color: hsl(223, 47%, 23%);
+    font-weight: 900;
+    font-size: 12px;
+    grid-area: annual-plan;
+    align-self: end;
 }
 
 .price {
+    font-size: 12px;
     color: hsl(224, 23%, 55%);
+    grid-area: price;
+    align-self: start;
 }
 
-.change {}
+.change {
+    font-size: 12px;
+    font-weight: 700;
+    grid-area: change;
+    justify-self: center;
+    align-self: center;
+}
 
 .payment-button {
     width: 80%;
     background-color: hsl(245, 75%, 52%);
     color: white;
     display: block;
-    margin: 0 auto;
+    font-weight: 500;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px -5px hsl(224, 23%, 55%);
+    cursor: pointer;
+    margin: 20px auto;
 }
 
 .cancel-button {
     color: hsl(224, 23%, 55%);
     display: block;
-    margin: 0 auto;
+    background-color: white;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    margin: auto;
 }
 
 .attribution {
